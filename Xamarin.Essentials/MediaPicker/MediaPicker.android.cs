@@ -56,7 +56,6 @@ namespace Xamarin.Essentials
         static async Task<FileResult> PlatformCaptureAsync(MediaPickerOptions options, bool photo)
         {
             await Permissions.EnsureGrantedAsync<Permissions.Camera>();
-            await Permissions.EnsureGrantedAsync<Permissions.StorageWrite>();
 
             var capturePhotoIntent = new Intent(photo ? MediaStore.ActionImageCapture : MediaStore.ActionVideoCapture);
 
